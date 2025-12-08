@@ -23,13 +23,13 @@ while (merged) {
                     let lastIndex = Math.max(x, y);
                     let firstIndex = Math.min(x, y);
                     
-                    arrayRanges.splice(lastIndex, 2);
+                    arrayRanges.splice(lastIndex, 2); // Delete always last index first to not messup the array
                     arrayRanges.splice(firstIndex, 2); 
 
                     
                     arrayRanges.push(newStart, newEnd);
                     merged = true;
-                    break loopExterno;
+                    break loopExterno;  // Restart the loop
                 }
         }
     }
