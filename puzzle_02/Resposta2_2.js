@@ -1,5 +1,4 @@
 const input = require('./input.js');
-const teste = require('./input.js');
 const array = input.split(",")
 let res = 0
 let check = true 
