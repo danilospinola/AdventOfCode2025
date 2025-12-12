@@ -4,7 +4,7 @@ let matrixRolls = []
 let marked = 0
 let removed = false
 let hasX = true
-
+let previousMarked = -1
 for (let x = 0; x < array.length; x++) {
     let arrayRollRow = array[x].split("")
     matrixRolls[x] = []
@@ -15,7 +15,8 @@ for (let x = 0; x < array.length; x++) {
 }
 
 
-while (hasX) {
+while (previousMarked != marked) {
+    previousMarked = marked
     for (let x = 0; x < matrixRolls.length; x++) {
         for (let y = 0; y < matrixRolls[x].length; y++) {
             isRoll(matrixRolls, x, y)

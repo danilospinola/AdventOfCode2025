@@ -1,7 +1,7 @@
 const input = require('./input.js');
 const array = input.split("\n")
 let matrixRolls = []
-let marked =0
+let marked = 0
 
 for (let x = 0; x < array.length; x++) {
     let arrayRollRow = array[x].split("")
@@ -21,75 +21,67 @@ for (let x = 0; x < matrixRolls.length; x++) {
 }
 
 
-function isRoll(matrix,x,y) {
+function isRoll(matrix, x, y) {
     let rolos = 0
-       if (matrix[x][y] == '@') {
-            try {
-                if (matrix[x][y+1] == '@') {
-                    rolos++
-                }
-            }
-            catch {
-                console.log("erro")
-            }
-                        try {
-                if (matrix[x][y-1] == '@') {
-                    rolos++
-                }
-            }
-            catch {
-                console.log("erro")
-            }
-                        try {
-                if (matrix[x+1][y] == '@') {
-                    rolos++
-                }
-            }
-            catch {
-                console.log("erro")
-            }
-                        try {
-                if (matrix[x+1][y+1] == '@') {
-                    rolos++
-                }
-            }
-            catch {
-                console.log("erro")
-            }
-                        try {
-                if (matrix[x+1][y-1] == '@') {
-                    rolos++
-                }
-            }
-            catch {
-                console.log("erro")
-            }
-                        try {
-                if (matrix[x-1][y] == '@') {
-                    rolos++
-                }
-            }
-            catch {
-                console.log("erro")
-            }
-                        try {
-                if (matrix[x-1][y-1] == '@') {
-                    rolos++
-                }
-            }
-            catch {
-                console.log("erro")
-            }
-            try {
-                if (matrix[x-1][y+1] == '@') {
-                    rolos++
-                }
-            }
-            catch {
-                console.log("erro")
+    if (matrix[x][y] == '@') {
+        try {
+            if (matrix[x][y + 1] == '@') {
+                rolos++
             }
         }
-    if(rolos<=3 && matrix[x][y] == '@'){
+        catch {
+        }
+        try {
+            if (matrix[x][y - 1] == '@') {
+                rolos++
+            }
+        }
+        catch {
+        }
+        try {
+            if (matrix[x + 1][y] == '@') {
+                rolos++
+            }
+        }
+        catch {
+        }
+        try {
+            if (matrix[x + 1][y + 1] == '@') {
+                rolos++
+            }
+        }
+        catch {
+        }
+        try {
+            if (matrix[x + 1][y - 1] == '@') {
+                rolos++
+            }
+        }
+        catch {
+        }
+        try {
+            if (matrix[x - 1][y] == '@') {
+                rolos++
+            }
+        }
+        catch {
+        }
+        try {
+            if (matrix[x - 1][y - 1] == '@') {
+                rolos++
+            }
+        }
+        catch {
+        }
+        try {
+            if (matrix[x - 1][y + 1] == '@') {
+                rolos++
+            }
+        }
+        catch {
+        }
+    }
+    if (rolos <= 3 && matrix[x][y] == '@') {
         marked++
     }
 }
